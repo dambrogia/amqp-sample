@@ -29,6 +29,11 @@ _This might take a while..._
 
     docker-compose up -d
 
+#### Install composer dependencies
+Conceptually, you can do this in either the producer or consumer, since the PHP source code is shared between the containers.
+
+    docker exec -it amqp_consumer /bin/zsh -c 'cd /var/www/html; composer install'
+
 #### Enter Docker container and start consumer
 
     docker exec -it amqp_consumer /bin/zsh
