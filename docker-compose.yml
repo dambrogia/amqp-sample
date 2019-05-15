@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+  amqp_producer:
+    build: ./services/web
+    container_name: amqp_producer
+    ports: [ '3000:80' ]
+    depends_on: [ amqp_broker ]
+    networks: [ amqp ]
+    privileged: true
+    volumes:
+      - './html/:/var/www/html'
+
+  amqp_consumer:
+    build: ./services/web
+    container_name: amqp_consumer
+    depends_on: [ amqp_broker ]
+    networks: [ amqp ]
+    privileged: true
+    volumes:
+      - './html/:/var/www/html'
+
+  amqp_broker:
+    container_name: amqp_broker
+    image: rabbitmq:3.7
+    networks: [ amqp ]
+    ports: [ '15672:15672', '5672:5672' ]
+    environment:
+      RABBITMQ_DEFAULT_PASS: docker
+      RABBITMQ_DEFAULT_USER: docker
+
+networks:
+  amqp:

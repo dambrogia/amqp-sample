@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Command\Produce;
+use App\Command\Consume;
+
+$application = new Application();
+
+$application->add(new Produce);
+$application->add(new Consume);
+
+$application->run();
