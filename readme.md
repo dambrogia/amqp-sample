@@ -10,6 +10,10 @@ This is a very basic example of using Rabbit MQ with PHP. The symfony console co
     git clone https://github.com/dambrogia/amqp-sample.git
     cd amqp-sample
 
+#### Basic Architecture
+
+I'm showing an example using one codebase that runs on both a Producer and Consumer. Obviously the messages are distrubuted by a broker. Each entity will have their own docker container.
+
 #### Start Docker with Docker Compose
 _This might take a while..._
 
