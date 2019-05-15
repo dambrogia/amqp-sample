@@ -69,7 +69,7 @@ ___
 
     docker exec -it amqp_producer /bin/zsh
     cd /var/www/html/
-    ./vendor/.bin/phpcs --standard=PSR2 src bin
+    ./vendor/bin/phpcs --standard=PSR2 src bin
 ___
 ### XDebug
 
