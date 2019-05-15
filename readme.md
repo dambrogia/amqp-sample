@@ -12,6 +12,7 @@ This is a very basic example of using Rabbit MQ with PHP. The symfony console co
 
 #### Start Docker with Docker Compose
 _This might take a while..._
+
     docker-compose up -d
 
 #### Enter Docker container and start consumer
