@@ -5,8 +5,8 @@ This is a very basic example of using Rabbit MQ with PHP. The symfony console co
 - [Requirements](#requirements)
 - [Basic Architecture](#basic-architecture)
 - [Getting Started](#getting-started)
-- [Code Styles](#code-styles-psr-2)
 - [What's Going On?](#whats-going-on)
+- [Code Styles](#code-styles-psr-2)
 - [XDebug](#xdebug)
 
 ### Requirements
