@@ -21,7 +21,11 @@ class Consume extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $callback = function ($message) use ($output) {
+            $output->writeln('--------------------');
             $output->writeln('Received: ' . $message->body);
+            $output->writeln('Working...');
+            sleep(3);
+            $output->writeln('Finished: ' . $message->body);
         };
 
         $connection = ConnectionFactory::getConnection();
