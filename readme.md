@@ -47,7 +47,7 @@ Conceptually, you can do this in either the producer or consumer, since the PHP 
 After you produce these messages, you should see them appear in your consumer.
 
 ##### Sending Multiple Messages at Once:
-    for i in {1..50}; do
+    for i in {1..25}; do
         /var/www/html/bin/console amqp:produce --id=$i;
     done
 
