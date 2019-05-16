@@ -32,10 +32,6 @@ class Produce extends Command
     {
         $option = $input->getOption(self::OPTION_NAME);
 
-        if (! $option) {
-            throw new \Exception('Missing --'. self::OPTION_NAME.' option');
-        }
-
         $connection = ConnectionFactory::getConnection();
         $channel = $connection->channel();
         $channel->queue_declare(Queue::NAME);
